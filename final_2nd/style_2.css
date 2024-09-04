@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+
+  
+
+body {
+    
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: linear-gradient(to bottom right, #f6fff6, #b2f0b2);
+    min-height: 100vh;
+}
+
+body::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url("Mask group.png");
+    background-size: 200px 200px; 
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+/* header{
+    background-color: #b2f0b2;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #f6fff6, #b2f0b2);
+    border-bottom: 2px solid #bbb9b9;
+   
+    height: 80px;
+}
+.logo img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.inner-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.language-selector .display_btn {
+    text-decoration: none;
+    color: #fff;
+    background-color:#57C74D;
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+} */
+
+nav{
+    width: 90%;
+    height: 12vh;
+    border-bottom: 1px solid black;
+    margin: 0% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 5%;
+}
+
+.logo{
+    height: 100%;
+}
+
+.logo > img{
+    height: 70%;
+}
+
+.links{
+    position: relative;
+    right: 0%;
+    display: grid;
+    place-items: center;
+}
+
+.nav-links{
+    display: flex;
+    gap: 3vw;
+}
+
+.side-links{
+    gap: 3vw;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255,0.5);
+    position: fixed;
+    top: 0%;
+    right: 0;
+    height: 100vh;
+    width: 70vw;
+    flex-direction: column;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 4vh;
+    display: none;
+}
+
+.ham{
+    display: none;
+    
+}
+
+.close{
+    display: none;
+}
+
+.close{
+    position: absolute;
+    top: 3vh;
+    right: 10vw;
+}
+
+.nav-links > li{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.side-links > li{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.side-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.display_btn {
+    background-color: #44c653;
+    color: #fff;
+    border: none;
+    padding: 10% 20%; 
+}
+
+.display_btn option {
+    background-color: #cdf7b9;
+    color: #000;
+    border: none;
+}
+
+.display_btn option:hover {
+    background-color: #44c653;
+    color: #fff;
+    border: none;
+}
+.hold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chatbot_container{
+    /* background-color: rgb(204, 242, 196); */
+    background-color: rgb(248, 216, 130);
+    
+    /* background:url('Mask group.png') ;   */
+    background-repeat: repeat;
+    height: 55vmin;
+    width:60vmin;
+    /* margin-left: 70vmin;
+    margin-right: 50vmin; */
+    display: flex;
+   
+    
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px rgb(189, 213, 170);
+    border: 2px solid rgb(93, 87, 87);
+    /*background: white url('Mask group.png')*/
+
+    position: relative;
+
+}
+.box{
+    
+    background-color: #C7FFB3;
+    
+    height: 12vmin;
+    width:100%;
+    flex-direction: column;
+
+    border-radius: 12px;
+    border-bottom:dashed gray ;
+    
+}
+#bot_img{
+    margin-left: 20px;
+    margin-top: 8px;
+    padding: 5px;
+    height: 60px;
+    width: 60px;
+    float: left;
+
+    background-size: cover;
+}
+#agribot{
+    font-size: 25px;;
+    font-weight: bold;
+    margin-left: 10px;
+    padding-top: 10px;
+    /*padding-bottom: 10px;*/
+    
+    
+}
+.main {
+    position: relative;
+}
+/* 
+#online{
+
+} */
+
+.line1 {
+    position: relative;
+}
+
+.line2 {
+    /* padding: 50px 0px; */
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.line1 img,
+.line2 img {
+    width: 100%;
+}
+
+.line1,
+.line2 {
+    width: 20%;
+}
+
+
+/* Hamburger Menu */
+/* .hamburger-menu {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 15;
+    background: linear-gradient(to bottom right, #f6f5f5, #92e292); 
+    padding: 10px;
+    border-radius: 10px; 
+}
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+} */
+
+
+/* @media (max-width: 680px) {
+    .inner-nav {
+        display: none; 
+        position: absolute;
+        top: 80px; 
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        z-index: 10; 
+    }
+
+    .inner-nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .inner-nav ul li a {
+        color: #333;
+        font-size: 18px;
+    }
+
+    .hamburger-menu {
+        display: flex; 
+        position: absolute; 
+        top: 25px; 
+        right: 20px; 
+    }
+
+    .navbar.active .inner-nav {
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .language-selector {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); 
+        top: 25px; 
+        z-index: 5; 
+    }
+} */
+
+@media (max-width: 770px){
+    .content{
+        flex-direction: column-reverse;
+    }
+
+    .nav-links{
+        gap: 10vw;
+    }
+    
+   
+
+    .hide{
+        display: none !important;
+    }
+
+    .ham {
+        display: block;
+    }
+
+    
+
+    button{
+        width: 50%;
+        height: 7vh;
+        font-size: 4vw;
+        padding: 0;
+    }
+}
+
+@media (max-width: 430px){
+    .logo{
+        height: 70%;
+    }
+
+    .display_btn {
+        padding: 5% 10%; 
+    }
+
+    
+    button{
+        width: 50%;
+        height: 5vh;
+        font-size: 4vw;
+        padding: 0;
+    }
+
+    
+}
+
+/*____________________________________________________________________________________________________*/
+
+@media (max-width: 768px) {
+    .chatbot_container {
+        height: 60vmin;
+        width: 70vmin;
+        display: flex;
+    }
+
+    .box {
+        width:100%;
+        height: 12vmin;
+        
+    }
+
+    #bot_img {
+
+        margin: 5px;
+        padding-top: 2px;
+        height: 10vh;
+        width: 8vw;
+        
+        /* margin-right: 10px; */
+    }
+
+   #agribot {
+        font-size: 1.5rem;
+        padding-top: 0.5px;
+        margin-top: 0.5px;
+        
+    } 
+    #online{
+        margin: 0;
+        font-size: 1rem;
+    }
+    
+}
+
+
+@media (max-width: 430px) {
+
+    .hold {
+        display: flex;
+        align-items: center;
+        
+    }
+    .chatbot_container {
+        margin-top: 18%;
+        height: 50vh;
+        width: 80vmin;
+        display: flex;
+        
+    }
+
+    .box {
+        width:100%;
+        height: 12vmin;
+        
+    }
+
+    #bot_img {
+
+        margin: 5px;
+        padding-top: 2px;
+        height: 35px;
+        width: 35px;
+        
+        
+        /* margin-right: 10px; */
+    }
+
+   #agribot {
+        font-size: 0.8rem;
+        padding-top: 0.5px;
+        margin-top: 0.5px;
+        
+    } 
+    #online{
+        margin: 0;
+        font-size: 0.5rem;
+    }
+
+    /* .line1{
+        width:20vh;
+    }
+    .line2{
+        text-align: right;
+    } */
+    
+}
+
+@media (max-width:400px)
+{
+    .navbar{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 750px) {
+    
+    .hold {
+        align-items: center;
+        justify-content: center;
+    }
+    .agribot-size {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .line1,
+    .line2 {
+        width: 50%;
+    }
+}
